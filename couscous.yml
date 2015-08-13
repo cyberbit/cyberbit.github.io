@@ -1,0 +1,18 @@
+template:
+    directory: website
+
+#Variables
+tagline: developer, musician, human.
+author: cyberbit
+authorLink: https://github.com/cyberbit
+
+#URLs
+baseUrl: https://cyberbit.github.io
+
+#Projects
+projects:
+    modation:
+        title: Modation
+        tagline: Soundation, amplified.
+        image: img/modation.png
+        url: modation
