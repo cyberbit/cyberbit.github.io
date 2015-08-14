@@ -9,10 +9,23 @@ authorLink: https://github.com/cyberbit
 #URLs
 baseUrl: https://cyberbit.github.io
 
-#Projects
-projects:
-    modation:
-        title: Modation
-        tagline: Soundation, amplified.
-        image: img/modation.png
-        url: modation
+#Sections
+sections:
+    #Portfolio
+    portfolio:
+        title: Portfolio
+        items:
+            modation:
+                title: Modation
+                tagline: Soundation, amplified.
+    
+    #Socials
+    socials:
+        title: Social
+        items:
+            soundcloud:
+                title: SoundCloud
+                link: https://soundcloud.com/cyberbit
+            soundation:
+                title: Soundation
+                link: https://soundation.com/user/cyberbit

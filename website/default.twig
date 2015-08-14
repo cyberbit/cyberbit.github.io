@@ -8,11 +8,15 @@
         <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat+Alternates:400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="{{ baseUrl }}/stylesheets/github-light.css" media="screen" rel="stylesheet" type="text/css">
-        <link href="{{ baseUrl }}/stylesheets/stylesheet.custom.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="{{ baseUrl }}/stylesheets/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="{{ baseUrl }}/stylesheets/bootstrap.custom.css" media="screen" rel="stylesheet" type="text/css">
     </head>
     <body>
+        {% block jumbotron %}{% endblock %}
         {% block content %}
-            {{ content|raw }}
+            <div class="container">
+                {{ content|raw }}
+            </div>
         {% endblock %}
     </body>
 </html>

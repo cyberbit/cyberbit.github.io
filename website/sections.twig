@@ -1,0 +1,29 @@
+{% for sectionId, section in sections %}
+    <h1 id="{{ sectionId }}" class="section-header">{{ section.title }}</h1>
+    <section class="{{ sectionId }}">
+        <ul class="media-list">
+            {% for itemId, item in section.items %}
+                <a href="#{{ itemId }}" class="media {{ itemId }}">
+                    <div class="center-block limit-width">
+                        {% if loop.index % 2 %}
+                            <div class="media-left media-middle">
+                                <img class="media-object" src="{{ baseUrl }}/img/{{ itemId }}.png" />
+                            </div>
+                        {% endif %}
+                        <div class="media-body media-middle {{ not loop.index % 2 ? "text-right" }}">
+                            <h1 class="media-heading">{{ item.title }}</h1>
+                            {{ item.tagline }}
+                        </div>
+                        {% if not loop.index % 2 %}
+                            <div class="media-right media-middle">
+                                <a href="#">
+                                    <img class="media-object" src="{{ baseUrl }}/img/{{ itemId }}.png" />
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </a>
+            {% endfor %}
+        </ul>
+    </section>
+{% endfor %}
