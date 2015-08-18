@@ -29,3 +29,15 @@ sections:
             soundation:
                 title: Soundation
                 link: https://soundation.com/user/cyberbit
+            twitter:
+                title: Twitter
+                link: https://twitter.com/plexabit
+            linkedin:
+                title: LinkedIn
+                link: https://www.linkedin.com/in/djmarcolesco
+            github:
+                title: GitHub
+                link: https://github.com/cyberbit
+            google-plus:
+                title: Google+
+                link: https://plus.google.com/+DJMarcolesco

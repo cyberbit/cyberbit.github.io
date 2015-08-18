@@ -4,13 +4,13 @@ $(function() {
 });
 
 function initNav() {
-    var $nav = $("#nav");
+    var $nav = $(".navbar-fixed-top");
     
     $(window).scroll(function() {
-        if ($nav.offset().top > 200) {
-            $nav.addClass("top-nav-collapse");
+        if ($nav.offset().top > $(".jumbotron").height()) {
+            $nav.addClass("navbar-shrink");
         } else {
-            $nav.removeClass("top-nav-collapse");
+            $nav.removeClass("navbar-shrink");
         }
     });
 }

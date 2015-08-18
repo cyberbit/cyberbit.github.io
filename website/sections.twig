@@ -1,5 +1,8 @@
 {% for sectionId, section in sections %}
-    <h1 id="{{ sectionId }}" class="section-header">{{ section.title }}</h1>
+    <h1 class="section-header">
+        <a id="{{ sectionId }}" class="anchor"></a>
+        {{ section.title }}
+    </h1>
     <section class="{{ sectionId }}">
         <ul class="media-list">
             {% for itemId, item in section.items %}
