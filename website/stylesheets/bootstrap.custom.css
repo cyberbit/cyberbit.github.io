@@ -128,7 +128,6 @@ h2 {
 }
 
 .section-header {
-    position: sticky;
     text-align: center;
     margin: 0;
     padding: 1em 0;
@@ -147,6 +146,11 @@ h2 {
 
 .hand {
     pointer: hand;
+}
+
+/* Desktop formatting */
+@media (min-width: 768px) {
+    
 }
 
 /* Mobile formatting */
