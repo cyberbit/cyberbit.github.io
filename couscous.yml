@@ -23,21 +23,24 @@ sections:
     socials:
         title: Social
         items:
-            soundcloud:
-                title: SoundCloud
-                link: https://soundcloud.com/cyberbit
-            soundation:
-                title: Soundation
-                link: https://soundation.com/user/cyberbit
             twitter:
                 title: Twitter
                 link: https://twitter.com/plexabit
+            instagram:
+                title: Instagram
+                link: https://instagram.com/plexabit
             linkedin:
                 title: LinkedIn
                 link: https://www.linkedin.com/in/djmarcolesco
             github:
                 title: GitHub
                 link: https://github.com/cyberbit
+            soundcloud:
+                title: SoundCloud
+                link: https://soundcloud.com/cyberbit
+            soundation:
+                title: Soundation
+                link: https://soundation.com/user/cyberbit
             google-plus:
                 title: Google+
                 link: https://plus.google.com/+DJMarcolesco
