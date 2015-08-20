@@ -11,6 +11,12 @@
 {% endblock %}
 
 {% block content %}
+    <h1 class="section-header"><a id="about" class="anchor"></a>About</h1>
+    <section class="about">
+        <div class="container lead">
+            {{ content|raw }}
+        </div>
+    </section>
     {% include "sections.twig" %}
     <footer>
         <div class="container text-center">
