@@ -38,6 +38,9 @@ sections:
             soundcloud:
                 title: SoundCloud
                 link: https://soundcloud.com/cyberbit
+            stack-overflow:
+                title: Stack Overflow
+                link: http://stackoverflow.com/users/3402854/cyberbit
             soundation:
                 title: Soundation
                 link: https://soundation.com/user/cyberbit
