@@ -124,6 +124,11 @@ header.jumbotron {
     color: white;
 }
 
+.stack-overflow {
+    background-color: #fe7a15;
+    color: white;
+}
+
 footer {
     background-color: black;
     color: white;
