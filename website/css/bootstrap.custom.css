@@ -129,6 +129,11 @@ header.jumbotron {
     color: white;
 }
 
+.bandcamp {
+    background-color: #629aa9;
+    color: white;
+}
+
 footer {
     background-color: black;
     color: white;
