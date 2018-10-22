@@ -51,7 +51,8 @@ export default {
               duration: 10
             }
           }
-        }
+        },
+        retina_detect: true
       })
     }
   }
