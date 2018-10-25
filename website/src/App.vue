@@ -7,14 +7,11 @@
           </section>
           <section class="navbar-center">
             <a href="/"><img src="@/assets/logo1-white.svg" class="dm-logo d-block"></a>
-            <h2 class="dm-navbar-title m-0" v-scroll-spy-active="{selector: 'span', class: 'dm-show'}">
-              <span>About</span>
-              <span>Experience</span>
-              <span>Education</span>
-              <span>Skills</span>
-              <span>Interests</span>
-              <span>Awards</span>
-            </h2>
+              <transition name="slide-fade" mode="out-in">
+                <h2 class="dm-navbar-title text-center m-0" :key="section">
+                  {{ sectionTitles[section] }}
+                </h2>
+              </transition>
           </section>
           <section class="navbar-section">
             <!-- <a @click="tab = 'about'" class="btn btn-link" :class="{ active: tab === 'about' }">About</a> -->
@@ -89,7 +86,15 @@ export default {
   data () {
     return {
       tab: false,
-      section: 0
+      section: 0,
+      sectionTitles: [
+        'About',
+        'Experience',
+        'Education',
+        'Skills',
+        'Interests',
+        'Awards'
+      ]
     }
   }
 }
@@ -156,15 +161,15 @@ export default {
       }
     }
 
-    .dm-navbar-title {
-      span {
-        display: none;
-      }
+    // .dm-navbar-title {
+    //   span {
+    //     display: none;
+    //   }
 
-      span.dm-show {
-        display: inline;
-      }
-    }
+    //   span.dm-show {
+    //     display: inline;
+    //   }
+    // }
   }
 
   // Hero block
@@ -194,6 +199,24 @@ export default {
     p {
       font-weight: 300;
     }
+  }
+
+  .dm-navbar-title {
+    width: 180px;
+  }
+
+  // Transitions
+  .slide-fade-enter-active {
+    transition: all .1s ease;
+  }
+  .slide-fade-leave-active {
+    transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+  .slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active for <2.1.8 */ {
+    transform: translateY(100px);
+    overflow: hidden;
+    opacity: 0;
   }
 
 </style>
