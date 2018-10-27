@@ -1,0 +1,21 @@
+{
+    "short_name": "dj marcolesco",
+    "name": "daniel marcolesco",
+    "icons": [
+        {
+            "src": "/static/icons/android-chrome-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/static/icons/android-chrome-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#000000",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#000000"
+}
