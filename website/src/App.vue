@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="dm-hero text-center">
-      <ParticlesJS></ParticlesJS>
+      <ParticlesJS/>
       <img src="@/assets/logo1-white.svg" class="centered">
       <h1 class="pb-2 mb-2">daniel marcolesco</h1>
       <h3>developer, musician, human.</h3>
@@ -37,6 +37,10 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
+        </div>
+        <div>
+          <h1>Wordy</h1>
+          <Wordy/>
         </div>
         <div v-if="!tab || tab === 'experience'">
           <h1>Experience</h1>
@@ -80,10 +84,12 @@
 
 <script>
 import ParticlesJS from './components/ParticlesJS'
+import Wordy from './components/Wordy'
 
 export default {
   components: {
-    ParticlesJS
+    ParticlesJS,
+    Wordy
   },
 
   data () {
@@ -92,6 +98,7 @@ export default {
       section: null,
       sectionTitles: [
         'About',
+        'Wordy',
         'Experience',
         'Education',
         'Skills',
@@ -110,6 +117,7 @@ export default {
   $base-font-family: 'Open Sans';
 
   @import "../node_modules/spectre.css/src/spectre";
+  @import "../node_modules/spectre.css/src/spectre-exp";
   // @import url('https://fonts.googleapis.com/css?family=Lato|Pompiere|Titillium+Web:300,400');
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Work+Sans:400');
 
@@ -203,6 +211,17 @@ export default {
 
   .dm-navbar {
     overflow: hidden;
+  }
+
+  .dm-btn-outline-error {
+    @include button-outline-variant($error-color);
+
+    background: $site-bg-color;
+
+    &:hover, &:focus {
+      background: $error-color;
+      color: $light-color;
+    }
   }
 
   // Transitions
