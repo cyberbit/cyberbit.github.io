@@ -103,6 +103,10 @@
           <h1>Wordy</h1>
           <Wordy/>
         </div>
+        <div>
+          <h1>Letter Loop</h1>
+          <LetterLoop/>
+        </div>
       </div>
     </div>
   </div>
@@ -111,11 +115,13 @@
 <script>
 import ParticlesJS from './components/ParticlesJS'
 import Wordy from './components/Wordy'
+import LetterLoop from './components/LetterLoop'
 
 export default {
   components: {
     ParticlesJS,
-    Wordy
+    Wordy,
+    LetterLoop
   },
 
   data () {
