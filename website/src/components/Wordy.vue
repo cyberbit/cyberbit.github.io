@@ -14,7 +14,7 @@
     </form>
 
     <div class="columns">
-      <div class="col-4" v-for="(wordChunk, index) in wordsChunked" :key="index">
+      <div class="column col-4" v-for="(wordChunk, index) in wordsChunked" :key="index">
         <h1>chunk {{ index }}</h1>
         <ul v-for="word in wordChunk" :key="word.id">
           <li>{{ word.value }}</li>

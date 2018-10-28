@@ -30,8 +30,12 @@
       <h3>developer, musician, human.</h3>
     </div>
     <div class="columns">
-      <div class="column col-sm-12 col-8 col-mx-auto" v-scroll-spy="{data: 'section', allowNoActive: true}">
-        <div v-if="!tab || tab === 'about'">
+      <div class="column col-sm-12 col-8 col-mx-auto text-center mb-2" v-if="page !== 'home'">
+        <button type="button" class="btn btn-link btn-lg" @click="page = 'home'">Back to Home</button>
+      </div>
+      <div class="column col-sm-12 col-8 col-mx-auto" v-scroll-spy="{data: 'section', allowNoActive: true}" v-if="page === 'home'">
+        <!-- <Home/> -->
+        <div>
           <h1>About</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
@@ -39,43 +43,65 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
         </div>
         <div>
-          <h1>Wordy</h1>
-          <Wordy/>
-        </div>
-        <div v-if="!tab || tab === 'experience'">
           <h1>Experience</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
         </div>
-        <div v-if="!tab || tab === 'education'">
+        <div>
           <h1>Education</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
         </div>
-        <div v-if="!tab || tab === 'skills'">
+        <div>
           <h1>Skills</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
         </div>
-        <div v-if="!tab || tab === 'interests'">
+        <div>
+          <h1>Portfolio</h1>
+          <h2>
+            Experiments
+            <a class="btn btn-primary float-right" @click="page = 'experiments'">View</a>
+          </h2>
+          <div class="clearfix"></div>
+          <div class="columns">
+            <div class="column col-4 col-md-6 col-xs-12">
+              <div class="card dm-card">
+                <div class="card-header">
+                  <div class="card-title h5">Wordy</div>
+                </div>
+                <div class="card-body">
+                  Word memory game.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
           <h1>Interests</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
         </div>
-        <div v-if="!tab || tab === 'awards'">
+        <div>
           <h1>Awards</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
+        </div>
+      </div>
+      <div class="column col-sm-12 col-8 col-mx-auto" v-if="page === 'experiments'">
+        <div>
+          <h1>Wordy</h1>
+          <Wordy/>
         </div>
       </div>
     </div>
@@ -94,14 +120,14 @@ export default {
 
   data () {
     return {
-      tab: false,
+      page: 'home',
       section: null,
       sectionTitles: [
         'About',
-        'Wordy',
         'Experience',
         'Education',
         'Skills',
+        'Portfolio',
         'Interests',
         'Awards'
       ]
@@ -259,6 +285,11 @@ export default {
     &-enter, &-leave-to {
       transform: translateY(-100px);
     }
+  }
+
+  .dm-card {
+    // background: $site-bg-color-light;
+    color: $dark-color;
   }
 
 </style>
