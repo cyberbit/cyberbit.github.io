@@ -34,6 +34,12 @@
         <button type="button" class="btn btn-link btn-lg" @click="page = 'home'">Back to Home</button>
       </div>
       <div class="column col-sm-12 col-8 col-mx-auto" v-scroll-spy="{data: 'section', allowNoActive: true}" v-if="page === 'home'">
+        <router-link to="/foo">Go to foo</router-link>
+        <router-link to="/bar">Go to bar</router-link>
+        <div>
+          <h1>Router</h1>
+          <router-view></router-view>
+        </div>
         <!-- <Home/> -->
         <div>
           <h1>About</h1>

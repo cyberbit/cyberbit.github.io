@@ -62,7 +62,7 @@ export default {
     valid () {
       let unique = _.findIndex(this.words, {value: this.inputTrimmed}) < 0
       let notEmpty = this.inputTrimmed.length
-      
+
       this.distance = levenshtein('kitten', 'sitting')
 
       return unique && notEmpty
