@@ -62,11 +62,9 @@ export default {
 <style lang="scss">
   #particles-js {
     position: absolute;
-    top: -50px;
-    right: 50px;
+    top: 0;
+    left: 0;
     bottom: 0;
-    left: -50px;
-    width: calc(100% + 100px);
-    height: calc(100% + 50px);
+    right: 0;
   }
 </style>
