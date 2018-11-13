@@ -1,9 +1,9 @@
 <template>
-  <div class="container text-light">
+  <div class="text-light">
     <div class="columns">
       <div class="column col-mx-auto">
         <transition name="slide-out">
-          <header class="navbar dm-navbar fixed" v-show="section !== null">
+          <!-- <header class="navbar dm-navbar fixed" v-show="section !== null">
             <section class="navbar-section"></section>
             <section class="navbar-center">
               <a href="/">
@@ -15,70 +15,61 @@
                 </transition>
               </h3>
             </section>
-            <section class="navbar-section">
-              <!-- <a @click="tab = 'about'" class="btn btn-link" :class="{ active: tab === 'about' }">About</a> -->
-              <!-- <a @click="tab = 'experience'" class="btn btn-link" :class="{ active: tab === 'experience' }">Experience</a> -->
-            </section>
-          </header>
+            <section class="navbar-section"></section>
+          </header> -->
         </transition>
       </div>
     </div>
-    <div class="dm-hero text-center">
-      <img src="@/assets/logo1-white.svg" class="centered">
-      <h1 class="pb-2 mb-2">daniel marcolesco</h1>
-      <h3>developer, musician, human.</h3>
+    <div class="dm-hero dm-d-viewport text-center">
+      <div class="container">
+        <div class="columns">
+          <div class="col-12">
+            <img src="@/assets/logo1-white.svg" class="centered">
+            <h1 class="pb-2 mb-2">daniel marcolesco</h1>
+            <h3>developer, musician, human.</h3>
+          </div>
+        </div>
+      </div>
       <ParticlesJS/>
     </div>
-    <div class="columns">
-      <div class="column col-sm-12 col-8 col-mx-auto text-center mb-2" v-if="page !== 'home'">
-        <button type="button" class="btn btn-link btn-lg" @click="page = 'home'">Back to Home</button>
-      </div>
-      <div class="column col-sm-12 col-8 col-mx-auto" v-scroll-spy="{data: 'section', allowNoActive: true}" v-if="page === 'home'">
-        <router-link to="/foo">Go to foo</router-link>
-        <router-link to="/bar">Go to bar</router-link>
-        <div>
-          <h1>Developer</h1>
-          <h2>
-            Experiments
-            <a class="btn btn-primary float-right" @click="page = 'experiments'">View</a>
-          </h2>
-          <div class="clearfix"></div>
-          <div class="columns">
-            <div class="column col-4 col-md-6 col-xs-12">
-              <div class="card dm-card">
-                <div class="card-header">
-                  <div class="card-title h5">Wordy</div>
-                </div>
-                <div class="card-body">
-                  Word memory game.
+    <div class="container dm-sections text-center">
+      <div class="columns bg-primary">
+        <div class="column">
+          <div class="dm-d-viewport">
+            <div class="container">
+              <div class="columns">
+                <div class="column">
+                  <h1>Developer</h1>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div>
-          <h1>Musician</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
-        </div>
-        <div>
-          <h1>Human</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat consequuntur minus natus asperiores, dignissimos officiis facere, ducimus rerum, deleniti hic ipsum labore voluptatibus quae! Voluptate eligendi exercitationem qui provident.</p>
+      </div>
+      <div class="columns bg-dark">
+        <div class="column">
+          <div class="dm-d-viewport">
+            <div class="container">
+              <div class="columns">
+                <div class="column">
+                  <h1>Musician</h1>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="column col-sm-12 col-8 col-mx-auto" v-if="page === 'experiments'">
-        <div>
-          <h1>Wordy</h1>
-          <Wordy/>
-        </div>
-        <div>
-          <h1>Letter Loop</h1>
-          <LetterLoop/>
+      <div class="columns bg-success">
+        <div class="column">
+          <div class="dm-d-viewport">
+            <div class="container">
+              <div class="columns">
+                <div class="column">
+                  <h1>Human</h1>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -120,6 +111,13 @@ export default {
   // Define override variables
   $primary-color: #3995d2;
   $base-font-family: 'Open Sans';
+
+  // Spectre Breakpoints
+  $break-xs: 480px;
+  $break-sm: 600px;
+  $break-md: 840px;
+  $break-lg: 960px;
+  $break-xl: 1280px;
 
   @import "../node_modules/spectre.css/src/spectre";
   @import "../node_modules/spectre.css/src/spectre-exp";
@@ -191,22 +189,36 @@ export default {
     overflow: hidden;
 
     img {
-      height: 100%;
-      width: 100%;
-      max-width: 500px;
-      padding: 2em;
+      height: auto;
+      min-width: 300px;
+      width: 70vw;
+      max-width: 800px;
+      padding: 0 2em 2em 2em;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 4.5em;
       display: inline-block;
       border-bottom: $primary-color 3px solid;
       letter-spacing: 1.5px;
+
+      @media screen and (max-width: $break-lg) {
+        font-size: 3.2em;
+      }
+
+      @media screen and (max-width: $break-sm) {
+        font-size: 2.3em;
+      }
+
+      @media screen and (max-width: $break-xs) {
+        font-size: 1.8em;
+      }
     }
 
     h3 {
       font-family: 'Open Sans';
       letter-spacing: .1em;
+      margin-bottom: 0;
     }
 
     p {
@@ -226,6 +238,24 @@ export default {
     &:hover, &:focus {
       background: $error-color;
       color: $light-color;
+    }
+  }
+
+  .dm-sections {
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+
+  .dm-d-viewport {
+    height: 100vh;
+
+    .container, .columns {
+      height: 100%;
+    }
+
+    .columns {
+      align-items: center;
     }
   }
 
