@@ -11,6 +11,7 @@
 
   @import "../../node_modules/spectre.css/src/spectre";
   @import "../../node_modules/spectre.css/src/spectre-exp";
+  @import "../../node_modules/spectre.css/src/spectre-icons";
   // @import url('https://fonts.googleapis.com/css?family=Lato|Pompiere|Titillium+Web:300,400');
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Work+Sans:400');
 
@@ -189,4 +190,42 @@
   .dm-card {
     // background: $site-bg-color-light;
     color: $dark-color;
+  }
+  h1 {
+    margin: 0;
+    padding: 0.5em;
+
+  }
+
+  .dm-content {
+    padding: 2em 1em;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .dm-page-nav {
+    align-items: stretch;
+    justify-content: space-between;
+
+    .dm-left {
+      align-items: center;
+      display: flex;
+      flex: 1 0 0;
+
+      .icon {
+        font-size: 1.7em;
+      }
+
+      a {
+        padding-left: 1em;
+      }
+    }
+
+    .dm-center {
+      align-items: center;
+      display: flex;
+      flex: 0 0 auto;
+    }
   }

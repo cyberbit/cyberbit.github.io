@@ -3,9 +3,15 @@
     <div class="container text-center">
       <div class="columns">
         <div class="column col-12 bg-dark">
-          <router-link to="/">
-            <h1 class="text-light">Musician</h1>
-          </router-link>
+          <div class="dm-page-nav columns">
+            <div class="dm-left column">
+              <router-link to="/" class="text-light">
+                <i class="icon icon-back"></i>
+              </router-link>
+            </div>
+            <div class="dm-center column"><h1>Musician</h1></div>
+            <div class="dm-right column"></div>
+          </div>
         </div>
         <div class="dm-content column col-12 bg-gray text-dark">
           <div class="container">
@@ -30,17 +36,4 @@ export default {
 
 </script>
 
-<style lang="scss" scoped>
-  h1 {
-    margin: 0;
-    padding: 0.5em;
-  }
-
-  .dm-content {
-    padding: 2em 1em;
-
-    p {
-      margin: 0;
-    }
-  }
-</style>
+<style lang="scss" scoped></style>
