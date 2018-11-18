@@ -39,6 +39,9 @@ export default {
 
   mounted () {
     window.onload = function () {
+      document.body.classList.add('audio')
+      document.children[0].classList.add('audio')
+
       var visualizer = document.getElementById('visualizer')
       var visualizer2 = document.getElementById('visualizer2')
       var low = visualizer2.getElementById('low')
@@ -156,54 +159,16 @@ export default {
     }
   },
 
+  destroyed () {
+    document.body.classList.remove('audio')
+    document.children[0].classList.remove('audio')
+  },
+
   methods: {
   }
 }
 </script>
 
 <style lang="scss">
-  html,
-  body {
-      width: 100%;
-      height: 100%;
-      padding: 0;
-      margin: 0;
-      background-color: #222;
-      font-size: 0;
-  }
-
-  svg {
-      display: block;
-      width: 100%;
-      height: 100%;
-      padding: 0;
-      margin: 0;
-      position: absolute;
-
-  }
-
-  h1 {
-      width: 100%;
-      font-family: sans-serif;
-      position: absolute;
-      text-align: center;
-      color: white;
-      font-size: 18px;
-      top: 40%;
-      opacity: 1;
-      transition: opacity 1s ease-in-out;
-      -moz-transition: opacity 1s ease-in-out;
-      -webkit-transition: opacity 1s ease-in-out;
-  }
-
-  h1 a {
-      color: #48b1f4;
-      text-decoration: none;
-  }
-
-  path {
-      stroke-linecap: square;
-      stroke: white;
-      stroke-width: 0.5px;
-  }
+@import '../styles/audio';
 </style>
