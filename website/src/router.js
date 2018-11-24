@@ -7,6 +7,7 @@ import Musician from './views/Musician'
 import Human from './views/Human'
 import AudioVisualizer from './components/AudioVisualizer'
 import AudioVisualizerCircle from './components/AudioVisualizerCircle'
+import Wordy from './components/Wordy'
 
 Vue.use(VueRouter)
 
@@ -17,7 +18,13 @@ const routes = [
   },
   {
     path: '/developer',
-    component: Developer
+    component: Developer,
+    children: [
+      {
+        path: 'wordy',
+        component: Wordy
+      }
+    ]
   },
   {
     path: '/musician',

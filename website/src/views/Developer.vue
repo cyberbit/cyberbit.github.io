@@ -22,6 +22,9 @@
             </div>
           </div>
         </div>
+        <div class="column col-12">
+          <router-view></router-view>
+        </div>
       </div>
     </div>
   </div>

@@ -26,6 +26,7 @@
 
 <script>
 import _ from 'lodash'
+import axios from 'axios'
 
 export default {
   name: 'Wordy',
@@ -55,6 +56,8 @@ export default {
     // add a word to the list
     add () {
       if (this.valid()) {
+        this.checkWord(this.inputTrimmed)
+
         this.words.push({
           id: this.lastID++,
           value: this.inputTrimmed
@@ -82,6 +85,19 @@ export default {
     // reset word database
     reset () {
       this.words = []
+    },
+
+    checkWord (word) {
+      axios
+        .get('https://wordsapiv1.p.mashape.com/words/' + word, {
+          headers: { 'X-Mashape-Key': 'rnZqO9yWBomshXuVScYmTc4rq2sxp1y9dsqjsnAqyv2pNUwNah' }
+        })
+        .then(response => {
+          console.log(response.data)
+        })
+        .catch(error => {
+          console.log('api error %o', error.response)
+        })
     }
   }
 }
