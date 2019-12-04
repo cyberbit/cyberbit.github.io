@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/marchghl/repositories/cyberbit.github.io
+    - echo Deploying to $DEPLOYPATH
