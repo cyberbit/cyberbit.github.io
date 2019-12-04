@@ -7,7 +7,7 @@ author: cyberbit
 authorLink: https://github.com/cyberbit
 
 #URLs
-baseUrl: https://cyberbit.github.io
+baseUrl: https://dj.marcoles.co
 
 #Sections
 sections:
@@ -17,8 +17,8 @@ sections:
         items:
             modation:
                 title: Modation
-                link: https://cyberbit.github.io/modation
-    
+                link: https://dj.marcoles.co/modation
+
     #Socials
     socials:
         title: Social
