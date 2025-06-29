@@ -4,6 +4,7 @@ real site coming soon :) in the meantime:
  - [Telem](https://telem.cyberbit.dev): Telemetry library for ComputerCraft
  - [Plotter](https://github.com/cyberbit/plotter): Charting primitives library for ComputerCraft
  - [Fluent](https://github.com/cyberbit/fluent): Value wrapper with method chaining in Lua
+ - [Imgon](https://github.com/cyberbit/imgon-cc): Zero-install web image conversion for ComputerCraft ([web interface](https://imgon.cyberbit.dev/))
 
 # Demos
  - [Mandelplot](https://gist.github.com/cyberbit/762ecc475eaab511cb6191052a47a5e3): Proof-of-concept Mandelbrot explorer for ComputerCraft
